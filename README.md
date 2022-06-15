@@ -1,2 +1,3 @@
-# termux-minecraft-server
-Minecraft Java Server on Termux / Android
+# Minecraft Java Server on Termux / Android
+
+_Work in progress_
