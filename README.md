@@ -103,7 +103,7 @@ cd ./termux-minecraft-server/
 
 ### Download Server JAR
 
-Now we will download the Minecraft server executable file. Here I am using [PufferFish server](https://github.com/pufferfish-gg/Pufferfish) 1.19 which has good performance. But it is possible to use other distros like Minecraft Vanilla, Bukkit, Papper-MC, ...
+Now we will download the Minecraft server executable file. Here I am using [PufferFish server](https://github.com/pufferfish-gg/Pufferfish) 1.19 which has good performance.
 
 ```shell
 wget https://ci.pufferfish.host/job/Pufferfish-1.19/lastSuccessfulBuild/artifact/build/libs/pufferfish-paperclip-1.19-R0.1-SNAPSHOT-reobf.jar
