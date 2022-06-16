@@ -40,7 +40,7 @@ This is the recommended method. See [Termux Java GitHub](https://github.com/Mast
 wget https://raw.githubusercontent.com/MasterDevX/java/master/installjava && bash installjava
 ```
 
-Use command `java -version` to verify that Java is installed correctly.Utilisez la commande `java -version` afin de vérifier que Java c'est bien installé
+Use command `java -version` to verify that Java is installed correctly.
 
 <br>
 
