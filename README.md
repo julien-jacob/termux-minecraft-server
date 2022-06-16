@@ -32,19 +32,32 @@ pkg update -y && pkg upgrade -y && pkg install wget -y
 
 <br>
 
-#### Method 1
+#### Main method
 
-This is the recommended method. See [Termux Java GitHub](https://github.com/MasterDevX/Termux-Java) for more information.
+This is the recommended method. 
+
+```shell
+pkg install openjdk-17 -y
+```
+
+Use command `java -version` to verify that Java is installed correctly.
+
+<br>
+
+#### Alternative method 1
+
+If the previous method did not work, you can proceed as follows:
+
+See [Termux Java GitHub](https://github.com/MasterDevX/Termux-Java) for more information.
 
 ```shell
 wget https://raw.githubusercontent.com/MasterDevX/java/master/installjava && bash installjava
 ```
 
-Use command `java -version` to verify that Java is installed correctly.Utilisez la commande `java -version` afin de vérifier que Java c'est bien installé
 
 <br>
 
-#### Method2
+#### Alternative method 2
 
 If the previous method did not work, you can proceed as follows:
 
