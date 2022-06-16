@@ -120,9 +120,6 @@ You can also choose another distribution. Here are the commands for some of the 
 wget https://ci.opencollab.dev/job/NukkitX/job/Nukkit/job/master/lastSuccessfulBuild/artifact/target/nukkit-1.0-SNAPSHOT.jar
 mv nukkit-1.0-SNAPSHOT.jar server.jar
 
-# Server Bedrock : Vanilla 1.19.1
-https://minecraft.azureedge.net/bin-linux/bedrock-server-1.19.1.01.zip
-
 
 # Server Java : PufferFish 1.18.2
 wget https://ci.pufferfish.host/job/Pufferfish-1.18/lastSuccessfulBuild/artifact/build/libs/pufferfish-paperclip-1.18.2-R0.1-SNAPSHOT-reobf.jar
