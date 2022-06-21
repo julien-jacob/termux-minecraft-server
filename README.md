@@ -1,6 +1,6 @@
-## Minecraft Java Server on Termux / Android
+## Minecraft Server on Termux / Android
 
-The procedure described here how to installs and runs a **Minecraft Java Edition server** on an **Android device** with Termux. **Root is not required**.
+The procedure described here how to installs and runs a **Minecraft Java Edition server** and **Minecraft Bedrock Edition server** on an **Android device** with Termux. **Root is not required**.
 
 <br><br>
 
@@ -32,19 +32,31 @@ pkg update -y && pkg upgrade -y && pkg install wget -y
 
 <br>
 
-#### Method 1
+#### Main method
 
-This is the recommended method. See [Termux Java GitHub](https://github.com/MasterDevX/Termux-Java) for more information.
+This is the recommended method. 
+
+```shell
+pkg install openjdk-17 -y
+```
+
+Use command `java -version` to verify that Java is installed correctly.
+
+<br>
+
+#### Alternative method 1
+
+If the previous method did not work, you can proceed as follows:
 
 ```shell
 wget https://raw.githubusercontent.com/MasterDevX/java/master/installjava && bash installjava
 ```
 
-Use command `java -version` to verify that Java is installed correctly.Utilisez la commande `java -version` afin de vérifier que Java c'est bien installé
+See [Termux Java GitHub](https://github.com/MasterDevX/Termux-Java) for more information.
 
 <br>
 
-#### Method2
+#### Alternative method 2
 
 If the previous method did not work, you can proceed as follows:
 
@@ -91,10 +103,35 @@ cd ./termux-minecraft-server/
 
 ### Download Server JAR
 
-Now we will download the Minecraft server executable file. Here I am using [PufferFish server](https://github.com/pufferfish-gg/Pufferfish) 1.19 which has good performance. But it is possible to use other distros like Minecraft Vanilla, Bukkit, Papper-MC, ...
+Now we will download the Minecraft server executable file. Here I am using [PufferFish server](https://github.com/pufferfish-gg/Pufferfish) 1.19 which has good performance.
 
 ```shell
 wget https://ci.pufferfish.host/job/Pufferfish-1.19/lastSuccessfulBuild/artifact/build/libs/pufferfish-paperclip-1.19-R0.1-SNAPSHOT-reobf.jar
+mv pufferfish-paperclip-1.19-R0.1-SNAPSHOT-reobf.jar server.jar
+```
+
+<br>
+
+You can also choose another distribution. Here are the commands for some of the best known :
+
+```shell
+
+# Server Bedrock : Nukit
+wget https://ci.opencollab.dev/job/NukkitX/job/Nukkit/job/master/lastSuccessfulBuild/artifact/target/nukkit-1.0-SNAPSHOT.jar
+mv nukkit-1.0-SNAPSHOT.jar server.jar
+
+
+# Server Java : PufferFish 1.18.2
+wget https://ci.pufferfish.host/job/Pufferfish-1.18/lastSuccessfulBuild/artifact/build/libs/pufferfish-paperclip-1.18.2-R0.1-SNAPSHOT-reobf.jar
+mv pufferfish-paperclip-1.18.2-R0.1-SNAPSHOT-reobf.jar server.jar
+
+
+# Server Java : Vanilla 1.19
+wget https://launcher.mojang.com/v1/objects/e00c4052dac1d59a1188b2aa9d5a87113aaf1122/server.jar
+
+
+# Server JAva : Vanilla 1.18.2
+wget https://launcher.mojang.com/v1/objects/c8f83c5655308435b3dcf03c06d9fe8740a77469/server.jar
 ```
 
 <br>
@@ -118,7 +155,7 @@ echo "eula=true" > eula.txt
 To start the server, you can use the command as below:
 
 ```shell
-java -jar pufferfish-paperclip-1.19-R0.1-SNAPSHOT-reobf.jar nogui
+java -jar server.jar nogui
 ```
 
 <br>
@@ -126,7 +163,7 @@ java -jar pufferfish-paperclip-1.19-R0.1-SNAPSHOT-reobf.jar nogui
 It is also possible to better control the memory allocated by Java for running Minecraft by specifying `-Xms` and `-Xmx` parameters as follows
 
 ```shell
-java -Xms512M -Xmx1536M -jar pufferfish-paperclip-1.19-R0.1-SNAPSHOT-reobf.jar nogui
+java -Xms512M -Xmx1536M -jar server.jar nogui
 ```
 
 <br>
